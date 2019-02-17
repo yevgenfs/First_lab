@@ -1,6 +1,6 @@
 package ua.lviv.IoT.fish;
 
-import java.util.List;
+
 
 public class FishProducts extends FishSearchAndSort {
 	private KindOfFish kindOfFish ;
@@ -11,6 +11,8 @@ public class FishProducts extends FishSearchAndSort {
 	private QualityOfFish qualityOfFish ;  
 	private String nameOfFish;
 	private double weight ;
+	
+	public FishProducts() {}
 	
 	public FishProducts(KindOfFish kindOfFish, int price, Import imports, boolean keepingStorageConditon,
 			String fromWhichCountry, QualityOfFish qualityOfFish, String nameOfwfsh, double weight) {
