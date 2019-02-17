@@ -5,24 +5,21 @@ public class FreshFish extends FishProducts {
 	private int experiationDate ;
 	private InWhichStatus inWhichStatus;
 
-	public FreshFish(KindOfFish kindOfFish, int price, Import imports, boolean keepingStorageConditon,
-			String fromWhichCountry, QualityOfFish qualityOfFish, String nameOfwfsh, double weight, int experiationDate,
-			InWhichStatus inWhichStatus) {
-		super(kindOfFish, price, imports, keepingStorageConditon, fromWhichCountry, qualityOfFish, nameOfwfsh, weight);
-		this.experiationDate = experiationDate;
-		this.inWhichStatus = inWhichStatus;
-	}
+	public FreshFish( ) {}
+		
 	
 	
 	
 	public void cut ()
 	{
-		 if(this.inWhichStatus ==  InWhichStatus.CUTED)
+		 if(inWhichStatus ==  InWhichStatus.CUTED)
 		 {
 		  System.out.println ("It was Cuted before");
 		 }
 		 
-	   this.inWhichStatus =  InWhichStatus.CUTED;
+		 else {
+	      inWhichStatus =  InWhichStatus.CUTED;
+		 }
  
 	}
 
