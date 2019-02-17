@@ -5,16 +5,10 @@ public class Herring extends FishProducts {
  private int quantiti  ;
  
 
-
+ public Herring() {} 
 
  
-public Herring(KindOfFish kindOfFish, int price, Import imports, boolean keepingStorageConditon,
-		String fromWhichCountry, QualityOfFish qualityOfFish, String nameOfwfsh, double weight, int experiationDate,
-		int quantiti) {
-	super(kindOfFish, price, imports, keepingStorageConditon, fromWhichCountry, qualityOfFish, nameOfwfsh, weight);
-	this.experiationDate = experiationDate;
-	this.quantiti = quantiti;
-}
+
 
 public int getExperiationDate() {
 	return experiationDate;
