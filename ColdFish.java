@@ -1,19 +1,16 @@
-package ua.lviv.IoT.fish;
+package main.java.ua.lviv.IoT.fish;
 
 public class ColdFish extends FishProducts {
-	 private int temperature;
+  private int temperature;
+  
+  public ColdFish() {}
 
-	public ColdFish () {}
+  public int getTemperature() {
+    return temperature;
+  }
 
-	
-	
-	public int getTemperature() {
-		return temperature;
-	}
-
-	public void setTemperature(int temperature) {
-		this.temperature = temperature;
-	}
-	 
+  public void setTemperature(int temperature) {
+    this.temperature = temperature;
+  }
 
 }
