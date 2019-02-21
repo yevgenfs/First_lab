@@ -1,10 +1,9 @@
 package manager;
 
 import java.util.List;
-
 import ua.lviv.IoT.fish.FishProducts;
 import ua.lviv.IoT.fish.KindOfFish;
-import ua.lviv.IoT.fish.QualityOfFish;
+
 
 public interface IFishSearchAndSort {
 

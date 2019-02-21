@@ -1,10 +1,10 @@
-package ua.lviv.IoT.fish;
+package main.java.ua.lviv.IoT.fish;
 
 public enum KindOfFish {
-  HERRING ,
+  HERRING,
  
-  FRESHFISH ,
+  FRESHFISH,
   
   COLDFISH 
-	
+
 }
