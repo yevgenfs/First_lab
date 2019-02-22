@@ -1,4 +1,4 @@
-package main.java.ua.lviv.IoT.fish;
+package ua.lviv.IoT.fish;
 
 public class Herring extends FishProducts {
   private int experiationDate;
