@@ -1,4 +1,4 @@
-package main.java.ua.lviv.IoT.fish;
+package ua.lviv.IoT.fish;
 
 public class ColdFish extends FishProducts {
   private int temperature;
