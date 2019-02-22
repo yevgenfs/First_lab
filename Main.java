@@ -1,12 +1,17 @@
-package main.java.ua.lviv.IoT.fish;
+package ua.lviv.IoT.fish;
 
 import java.util.ArrayList;
 import java.util.List;
+import ua.lviv.IoT.fish.FishProducts;
+import ua.lviv.IoT.fish.KindOfFish;
+import ua.lviv.IoT.fish.Import;
+import ua.lviv.IoT.fish.QualityOfFish;
+
 
 public class Main {
 
   public static void main(String[] args) {
-    FishProducts fish1 = new  FishProducts(KindOfFish.FRESHFISH,15,Import.IMPORT,true,"England",
+   /* FishProducts fish1 = new  FishProducts(KindOfFish.FRESHFISH,15,Import.IMPORT,true,"England",
         QualityOfFish.WELLQUALITY,"a",54);
     FishProducts fish2 = new  FishProducts(KindOfFish.FRESHFISH,20,Import.IMPORT,true,"England",
         QualityOfFish.WORSTQUALITY,"b",48);
@@ -30,9 +35,9 @@ public class Main {
     }
 
     System.out.println("S");
-    fishList.get(0).weightIncrese(fishList);
-    fishList.get(0).weightDecrese(fishList);
-    fishList.get(0).nameDecrese(fishList);
-    fishList.get(0).nameIncrese(fishList);
+    fishList.get(0).weightSort(fishList,false);
+    fishList.get(0).weightSort(fishList,true);
+    fishList.get(0).nameSort(fishList,true);
+    fishList.get(0).nameSort(fishList,false);*/
   }
 }
