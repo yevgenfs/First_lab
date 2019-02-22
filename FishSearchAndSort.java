@@ -1,7 +1,8 @@
-package main.java.ua.lviv.IoT.fish;
+package ua.lviv.IoT.fish;
 
+import java.util.Collections;
 import java.util.List;
-import main.java.manager.IFishSearchAndSort;
+import manager.IFishSearchAndSort;
 
 public   class FishSearchAndSort implements IFishSearchAndSort  {
 
@@ -17,39 +18,37 @@ public   class FishSearchAndSort implements IFishSearchAndSort  {
     return fishList;
   }
   
-  public List<FishProducts> nameDecrese(List<FishProducts> fish) {
-    fish.sort((FishProducts o1, FishProducts o2) -> o1.getNameOfFish()
-         .compareTo(o2.getNameOfFish()));
+  public List<FishProducts> nameSort(List<FishProducts> fish , boolean incrise) {
     fish.sort((o1, o2) -> o1.getNameOfFish().compareTo(o2.getNameOfFish()));
-    fish.forEach(s -> System.out.println(s));
-    System.out.println("s");
-    return fish;
+    if (incrise == true) {
+      Collections.reverse(fish);
+      fish.forEach(s -> System.out.println(s));
+      return fish;
+    } else {
+      fish.forEach(s -> System.out.println(s));
+      System.out.println("s");
+      return fish;
+    }
   }
   
-  public  List<FishProducts> nameIncrese(List<FishProducts> fish) {
-    fish.sort((FishProducts o1, FishProducts o2) -> o2.getNameOfFish()
-        .compareTo(o1.getNameOfFish()));
-    fish.sort((o1, o2) -> o2.getNameOfFish().compareTo(o1.getNameOfFish()));
-    fish.forEach(s -> System.out.println(s));
-    System.out.println("s");
-    return fish;
-  }
+  
 
-  public List<FishProducts> weightDecrese(List<FishProducts> fish) {
+  public List<FishProducts> weightSort(List<FishProducts> fish,boolean incrise) {
     fish.sort((FishProducts o1, FishProducts o2) -> (int)o1.getWeight() - (int)o2.getWeight());
-    fish.forEach(s -> System.out.println(s));
-    System.out.println("s");
-    return fish;
+    if (incrise == true) {
+      Collections.reverse(fish);
+      fish.forEach(s -> System.out.println(s));
+      return fish;
+    } else {
+      fish.forEach(s -> System.out.println(s));
+      System.out.println("s");
+      return fish;
+    }
+    
+    
   }
 
-  public  List<FishProducts> weightIncrese(List<FishProducts> fish) {
-    fish.sort((FishProducts o1, FishProducts o2) -> (int)o2.getWeight() - (int)o1.getWeight());
-    for (int i = 0;i < fish.size();i++) {
-      System.out.println(fish.get(i));
-    }
-    System.out.println("s");
-    return fish;
-  }
+
 }
 
 
