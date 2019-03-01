@@ -6,7 +6,15 @@ public class FreshFish extends FishProducts {
   private InWhichStatus inWhichStatus;
 
   public FreshFish() {}
-
+  
+  public String getHeaders() {
+    return super.getHeaders() + "," + "experiationDate";
+  }
+  
+  public String toCSv() {
+    return super.toCSv() + "," + experiationDate;
+  }
+ 
   public void cut() {
     if (inWhichStatus == InWhichStatus.CUTED) {
       System.out.println("It was Cuted before"); 
