@@ -7,7 +7,13 @@ public class Herring extends FishProducts {
 
   public Herring() {} 
 
- 
+  public String getHeaders() {
+    return super.getHeaders() + "," + "experiationDate" + "quantiti";
+  }
+  
+  public String toCSv() {
+    return super.toCSv() + "," + experiationDate + quantiti;
+  }
 
 
   public int getExperiationDate() {
