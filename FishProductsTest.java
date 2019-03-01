@@ -2,20 +2,22 @@ package ua.lviv.IoT.fish;
 
 import static org.junit.jupiter.api.Assertions.*;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 class FishProductsTest {
   private List<FishProducts> fishList = new ArrayList<FishProducts>();
+  FishProductsWriter fpw = new FishProductsWriter();
 
   @BeforeEach
   void setUp() throws Exception {
    
     
-    fishList.add(new  FishProducts(KindOfFish.FRESHFISH,-1,Import.IMPORT,true,"England",
+    fishList.add(new  FishProducts(KindOfFish.FRESHFISH,1,Import.IMPORT,true,"England",
         QualityOfFish.WELLQUALITY,"a",54));
     fishList.add(new  FishProducts(KindOfFish.FRESHFISH,20,Import.IMPORT,true,"England",
          QualityOfFish.WORSTQUALITY,"b",48));
@@ -26,7 +28,16 @@ class FishProductsTest {
     fishList.add(new  FishProducts(KindOfFish.COLDFISH,20,Import.IMPORT,true,"England",
          QualityOfFish.WELLQUALITY,"rase",52));
   }
-
+  
+  @Test
+  void testWrite() throws IOException {
+    
+    File file = new File("fishList");
+    fpw.writeToFile(fishList);
+    assertTrue(file.length() > 0);
+    
+  }
+  
   @Test
   void testPriceAndKindOfSort() {
     fishList.get(0).priceAndKindOfSort(fishList,15,50,KindOfFish.FRESHFISH);
@@ -109,14 +120,5 @@ class FishProductsTest {
     
   }
   
- /* @Test
-  public void testWeightSortIllegalArgumentException() {
-
-    assertThrows(IllegalArgumentException.class,
-        () -> fishList.get(0).weightSort(fishList,true),
-              "Expected PriceAndKindOfSort()"
-              + "to throw NullPointerException, but it didn't");
-    
-  }*/
 
 }
