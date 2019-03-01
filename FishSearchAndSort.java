@@ -4,7 +4,7 @@ import java.util.Collections;
 import java.util.List;
 import manager.IFishSearchAndSort;
 
-public   class FishSearchAndSort implements IFishSearchAndSort  {
+public   class FishSearchAndSort extends FishProductsWriter implements IFishSearchAndSort  {
 
  
   public List<FishProducts> priceAndKindOfSort(List<FishProducts> fishList, int hight,int low,
