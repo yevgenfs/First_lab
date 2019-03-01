@@ -1,6 +1,6 @@
 package ua.lviv.IoT.fish;
 
-
+import java.util.List;
 
 public class FishProducts extends FishSearchAndSort {
   private KindOfFish kindOfFish;
@@ -33,6 +33,16 @@ public class FishProducts extends FishSearchAndSort {
       + fromWhichCountry
        + ", qualityOfFish=" + qualityOfFish + ", nameOfwfsh=" + nameOfFish + ", weight=" + weight 
        + "]";
+  }
+  
+  public String toCSv() {
+    return kindOfFish + "," + price + "," + imports + "," + keepingStorageConditon
+      + "," + fromWhichCountry + "," + qualityOfFish + "," + nameOfFish + "," + weight; 
+  }
+  
+  public String  getHeaders() {
+    return "KindOfFish" + "," + "price" + "," + "imports" + "," + "keepingStorageConditon"
+        + "," + "fromWhichCountry" + "," + "qualityOfFish" + "," + "nameOfFish" + "," + "weight"; 
   }
 
 
@@ -95,6 +105,7 @@ public class FishProducts extends FishSearchAndSort {
   public double getWeight() {
     return weight;
   }
+  
 
   public void setWeight(double weight) {
     this.weight = weight;
