@@ -12,5 +12,13 @@ public class ColdFish extends FishProducts {
   public void setTemperature(int temperature) {
     this.temperature = temperature;
   }
+  
+  public String getHeaders() {
+    return super.getHeaders() + "," + "temperature";
+  }
+  
+  public String toCSv() {
+    return super.toCSv() + "," + temperature;
+  }
 
 }
