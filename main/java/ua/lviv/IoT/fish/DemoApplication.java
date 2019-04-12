@@ -24,6 +24,10 @@ public class DemoApplication {
                   QualityOfFish.WORSTQUALITY,"b",48));
       repository.save(new  FishProducts(KindOfFish.FRESHFISH,30,Import.IMPORT,true,"England",
                    QualityOfFish.MIDLEQUALITY,"c",50));
+      repository.save(new  FishProducts(KindOfFish.FRESHFISH,30,Import.IMPORT,true,"England",
+              QualityOfFish.MIDLEQUALITY,"c",50));
+      repository.save(new  FishProducts(KindOfFish.FRESHFISH,30,Import.IMPORT,true,"England",
+              QualityOfFish.MIDLEQUALITY,"c",50));
 
       repository.findAll().forEach(fishProducts -> System.out.println(fishProducts));
     };
