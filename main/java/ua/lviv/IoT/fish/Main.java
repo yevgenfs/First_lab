@@ -2,17 +2,15 @@ package ua.lviv.IoT.fish;
 
 import java.io.IOException;
 
-import java.util.ArrayList;
 
+import java.util.ArrayList;
+ 
 import java.util.List;
-import ua.lviv.IoT.fish.FishProducts;
-import ua.lviv.IoT.fish.Import;
-import ua.lviv.IoT.fish.KindOfFish;
-import ua.lviv.IoT.fish.QualityOfFish;
 
 
 public class Main {
-  public static void main(String[] args) throws IOException {
+  public static void main(String[] args)  {
+	
    /* FishProducts fish1 = new  FishProducts(KindOfFish.FRESHFISH,15,Import.IMPORT,true,"England",
         QualityOfFish.WELLQUALITY,"a",54);
     FishProducts fish2 = new  FishProducts(KindOfFish.FRESHFISH,20,Import.IMPORT,true,"England",
